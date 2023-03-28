@@ -24,3 +24,6 @@ $ docker compose up
 ```sh
 - http://localhost:3000/docs
 ```
+
+## API Graphical Representation
+<img src="graphical.jpg"/>
