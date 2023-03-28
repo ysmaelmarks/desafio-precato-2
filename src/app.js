@@ -15,17 +15,17 @@ const sequelize = new Sequelize("database_name", "root", "password", {
 
 // Testa a conexão com o banco de dados
 sequelize.authenticate()
-  .then(() => console.log("Conexão com o banco de dados estabelecida com sucesso"))
-  .catch((error) => console.log("Não foi possível conectar ao banco de dados:", error))
+  .then(() => console.log("Database connection successfully"))
+  .catch((error) => console.log("Unable to connect to database:", error))
 
 // Sincroniza o Sequelize com o banco de dados
 sequelize.sync()
-  .then(() => console.log("Banco de dados sincronizado com sucesso"))
-  .catch((error) => console.log("Não foi possível sincronizar o banco de dados:", error))
+  .then(() => console.log("Database successfully synchronized"))
+  .catch((error) => console.log("Unable to sync the database:", error))
 
 const app = express();
 app.use(cors({
-    origin: "http://localhost:3000"
+  origin: "http://localhost:3000"
 }));
 app.use(express.json());
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));

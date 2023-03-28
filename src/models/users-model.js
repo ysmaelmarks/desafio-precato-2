@@ -27,10 +27,10 @@ const User = sequelize.define(
             type: DataTypes.STRING,
             allowNull: false
         },
-        created_at:{
+        created_at: {
             type: DataTypes.DATE,
             defaultValue: DataTypes.NOW,
-          }
+        }
     },
     {
         timestamps: false,
@@ -38,12 +38,12 @@ const User = sequelize.define(
 );
 
 (async () => {
-  try {
-    await sequelize.sync();
-    console.log("Tabelas criadas com sucesso!");
-  } catch (error) {
-    console.error("Erro ao criar tabelas:", error);
-  }
+    try {
+        await sequelize.sync();
+        console.log("Tabelas criadas com sucesso!");
+    } catch (error) {
+        console.error("Erro ao criar tabelas:", error);
+    }
 })();
 
 export default User;
