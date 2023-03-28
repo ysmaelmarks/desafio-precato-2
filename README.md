@@ -7,7 +7,7 @@ Node.js and Docker
 Clone this repo and install the dependencies
 
 ```sh
-$ git clone https://github.com/ysmaelmarks/desafio-precato.git
+$ git clone https://github.com/ysmaelmarks/desafio-precato2.git
 $ cd desafio-precato/
 $ npm i
 ```
